@@ -7,6 +7,8 @@ import {HashRouter, Route, Switch} from 'react-router-dom';
 
 import rootReducer from '../store/reducers';
 
+import Header from './Layout/header/Header';
+
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
 export class App extends Component {
@@ -14,6 +16,7 @@ export class App extends Component {
     return (
       <Provider store={store}>
         <HashRouter>
+          <Header/>
           <Switch>
           </Switch>
         </HashRouter>
