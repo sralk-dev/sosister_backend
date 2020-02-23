@@ -10,6 +10,7 @@ import rootReducer from '../store/reducers';
 import Header from './Layout/header/Header';
 import SubHeader from './Layout/subheader/SubHeader';
 import Footer from './Layout/footer/Footer';
+import Home from './home/Home';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
@@ -21,6 +22,7 @@ export class App extends Component {
           <Header/>
           <SubHeader/>
           <Switch>
+            <Route exact path='/' component={Home}/>
           </Switch>
           <Footer/>
         </HashRouter>
