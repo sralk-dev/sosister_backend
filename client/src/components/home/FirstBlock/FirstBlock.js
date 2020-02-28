@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TrendingRecipesBox from './Trending recipes/TrendingRecipesBox'
-import SideBarBox from './sidebar/SideBarBox'
+import SideBarBox from '../../widgets/sidebar/SideBarBox'
 
 export class FirstBlock extends Component {
   render() {

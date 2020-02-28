@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import RatingStars from '../../Widgets/Recipes/RatingStars';
-import MetaRecipe from '../../Widgets/Recipes/MetaRecipe';
+import RatingStars from '../../widgets/Recipes/RatingStars';
+import MetaRecipe from '../../widgets/Recipes/MetaRecipe';
 
 export class Recipe extends Component {
   render() {

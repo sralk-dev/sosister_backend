@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import MetaDetailRecipe from '../../../Widgets/Recipes/MetaDetailRecipe'
-import Actions from '../../../Widgets/Recipes/Actions'
+import MetaDetailRecipe from '../../../widgets/Recipes/MetaDetailRecipe'
+import Actions from '../../../widgets/Recipes/Actions'
 
 export class RecipeWidgets extends Component {
   render() {

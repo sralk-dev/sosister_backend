@@ -7,14 +7,14 @@ import {HashRouter, Route, Switch} from 'react-router-dom';
 
 import rootReducer from '../store/reducers';
 
-import Header from './Layout/header/Header';
-import SubHeader from './Layout/subheader/SubHeader';
-import Footer from './Layout/footer/Footer';
+import Header from './layout/header/Header';
+import SubHeader from './layout/subheader/SubHeader';
+import Footer from './layout/footer/Footer';
 import Home from './home/Home';
 import Category from './category/Category';
-import Recipes from './Recipes/Recipes';
-import Scrollup from './Widgets/Scrollup';
-import { notFound404 } from './Errors/notFound404';
+import Recipes from './recipes/Recipes';
+import Scrollup from './widgets/Scrollup';
+import { notFound404 } from './errors/notFound404';
 import RecipeDetails from './recipeDetails/RecipeDetails';
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
