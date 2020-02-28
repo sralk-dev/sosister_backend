@@ -16,7 +16,7 @@ export class MetaDetailRecipe extends Component {
         </li>
         <li class="single-meta">
           <a href="#">
-            <i class="fas fa-user"></i>by <span>{owner}</span>
+            <i class="fas fa-user"></i>by <span>{owner.name}</span>
           </a>
         </li>
         <li class="single-meta">

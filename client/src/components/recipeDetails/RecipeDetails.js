@@ -5,7 +5,11 @@ import RecipeMenu from './recipeMenu/RecipeMenu'
 let dummyData = {
   "title": "Krasnaya Ribka",
   "category": "Ribka",
-  "owner": "Petr Alabarv",
+  "owner": {
+    "name": "Petr Alabrv",
+    "img": "img/blog/author9.jpg",
+    "about": "I love cooking and blogging. Using a fork, break salmon. Halve reserved potatoes and eggs crosswise."
+  },
   "date": "Nov 14, 2018",
   "score": 2,
   "qtyLikes": 213,

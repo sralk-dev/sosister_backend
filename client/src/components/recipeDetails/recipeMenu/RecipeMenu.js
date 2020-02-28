@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import RecipeInfo from './RecipeInfo/RecipeInfo'
 import StructureBox from './StructureBox/StructureBox'
 import CookStepsBox from './CookStepsBox/CookStepsBox'
+import Author from './Author/Author'
 
 export class RecipeMenu extends Component {
   render() {
@@ -12,6 +13,7 @@ export class RecipeMenu extends Component {
             <RecipeInfo info={this.props.info}/>
             <StructureBox info={this.props.info}/>
             <CookStepsBox cookSteps={this.props.info.cookSteps}/>
+            <Author info={this.props.info.owner}/>
           </div>
         </div>
       </section>
