@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export class Menu extends Component {
   render() {
     return (
-      <div class="footer-menu">
+      <div className="footer-menu">
         <ul>
           <li><a href="#">FACEBOOK</a></li>
           <li><a href="#">TWITTER</a></li>

@@ -5,9 +5,9 @@ import SideBarBox from './sidebar/SideBarBox'
 export class FirstBlock extends Component {
   render() {
     return (
-      <section class="padding-bottom-45">
-        <div class="container">
-          <div class="row gutters-60">
+      <section className="padding-bottom-45">
+        <div className="container">
+          <div className="row gutters-60">
             <TrendingRecipesBox/>
             <SideBarBox/>
           </div>

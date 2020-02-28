@@ -6,18 +6,18 @@ export class SideBarRecipe extends Component {
     const {number, title, owner, img, category} = this.props.info;
 
     return (
-      <li class="single-item">
-        <div class="item-img">
+      <li className="single-item">
+        <div className="item-img">
           <a href="#"><img src={img} alt="Post"/></a>
-          <div class="count-number">{number}</div>
+          <div className="count-number">{number}</div>
         </div>
-        <div class="item-content">
-          <div class="item-ctg">{category}</div>
-          <h4 class="item-title">
+        <div className="item-content">
+          <div className="item-ctg">{category}</div>
+          <h4 className="item-title">
             <a href="#">{title}</a>
           </h4>
-          <div class="item-post-by">
-            <a href="single-blog.html"><i class="fas fa-user"></i><span>by</span> {owner}</a>
+          <div className="item-post-by">
+            <a href="single-blog.html"><i className="fas fa-user"></i><span>by</span> {owner}</a>
           </div>
         </div>
       </li>

@@ -37,11 +37,11 @@ let dummyData = [
 export class RecipesBox extends Component {
   render() {
 
-    const recipes = dummyData.map( recipe => <Recipe info={recipe}/> );
+    const recipes = dummyData.map( (recipe, i) => <Recipe key={i} info={recipe}/> );
 
     return (
-            <div class="col-lg-8">
-              <div class="row">
+            <div className="col-lg-8">
+              <div className="row">
                 {recipes}
               </div>
             </div>

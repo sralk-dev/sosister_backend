@@ -10,8 +10,8 @@ export class Scrollup extends Component {
 
   render() {
     return (
-      <a onClick={this.scrollToTop} href='#' data-type="section-switch" class="scrollup">
-        <i class="fas fa-angle-double-up"></i>
+      <a onClick={this.scrollToTop} href='#' data-type="section-switch" className="scrollup">
+        <i className="fas fa-angle-double-up"></i>
       </a>
     )
   }

@@ -8,22 +8,22 @@ export class MetaDetailRecipe extends Component {
     const {owner, date, qtyLikes, score} = this.props.info;
 
     return (
-      <ul class="entry-meta">
-        <li class="single-meta">
+      <ul className="entry-meta">
+        <li className="single-meta">
           <a href="#">
-            <i class="far fa-calendar-alt"></i>{date}
+            <i className="far fa-calendar-alt"></i>{date}
           </a>
         </li>
-        <li class="single-meta">
+        <li className="single-meta">
           <a href="#">
-            <i class="fas fa-user"></i>by <span>{owner.name}</span>
+            <i className="fas fa-user"></i>by <span>{owner.name}</span>
           </a>
         </li>
-        <li class="single-meta">
+        <li className="single-meta">
           <RatingStars score={score}/>
         </li>
-        <li class="single-meta">
-          <a href="#"><i class="fas fa-heart">
+        <li className="single-meta">
+          <a href="#"><i className="fas fa-heart">
             </i><span>{qtyLikes}</span>Likes
           </a>
         </li>

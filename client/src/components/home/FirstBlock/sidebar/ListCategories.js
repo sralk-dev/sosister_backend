@@ -27,14 +27,14 @@ let dummyData = [
 export class ListCategories extends Component {
   render() {
 
-    const categories = dummyData.map(category => <Category info={category}/>);
+    const categories = dummyData.map( (category, i) => <Category key={i} info={category}/>);
 
     return (
-      <div class="widget">
-        <div class="section-heading heading-dark">
-          <h3 class="item-heading">CATEGORIES</h3>
+      <div className="widget">
+        <div className="section-heading heading-dark">
+          <h3 className="item-heading">CATEGORIES</h3>
         </div>
-        <div class="widget-categories">
+        <div className="widget-categories">
           <ul>
             {categories}
           </ul>

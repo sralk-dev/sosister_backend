@@ -27,12 +27,12 @@ let dummyData = [
 export class CategoryBox extends Component {
   render() {
 
-    const categories = dummyData.map( recipe => <CategoryItem info={recipe}/>);
+    const categories = dummyData.map( (recipe, i) => <CategoryItem key={i} info={recipe}/>);
 
     return (
-      <section class="category-page-wrap padding-top-80 padding-bottom-50">
-        <div class="container">
-          <div class="row">
+      <section className="category-page-wrap padding-top-80 padding-bottom-50">
+        <div className="container">
+          <div className="row">
             {categories}
           </div>
         </div>

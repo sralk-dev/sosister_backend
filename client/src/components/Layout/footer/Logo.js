@@ -5,8 +5,8 @@ export class Logo extends Component {
   render() {
     return (
       <div>
-        <div class="footer-logo">
-          <Link to="/"><img src="img/logo-light.png" class="img-fluid" alt="footer-logo"/></Link>
+        <div className="footer-logo">
+          <Link to="/"><img src="img/logo-light.png" className="img-fluid" alt="footer-logo"/></Link>
         </div>
       </div>
     )

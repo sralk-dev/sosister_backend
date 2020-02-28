@@ -8,16 +8,16 @@ export class Recipe extends Component {
     const {info} = this.props;
 
     return (
-      <div class={info.isTop ? "col-12" : "col-md-6 col-sm-6 col-12"}>
-        <div class="product-box-layout1">
-          <figure class="item-figure">
+      <div className={info.isTop ? "col-12" : "col-md-6 col-sm-6 col-12"}>
+        <div className="product-box-layout1">
+          <figure className="item-figure">
             <a href="single-recipe1.html">
               <img src={info.img} alt="Product"/>
             </a>
           </figure>
-          <div class="item-content">
-            <span class="sub-title">{info.category}</span>
-            <h2 class="item-title">
+          <div className="item-content">
+            <span className="sub-title">{info.category}</span>
+            <h2 className="item-title">
               <a href="single-recipe1.html">{info.title}</a>
             </h2>
             <RatingStars score={info.score}/>

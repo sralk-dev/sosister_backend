@@ -7,8 +7,8 @@ export class NutritionItem extends Component {
 
     return (
       <li>
-        <div class="nutrition-name">{name}</div>
-        <div class="nutrition-value">{value}</div>
+        <div className="nutrition-name">{name}</div>
+        <div className="nutrition-value">{value}</div>
       </li>
     )
   }

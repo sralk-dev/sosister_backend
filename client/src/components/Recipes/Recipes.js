@@ -5,9 +5,9 @@ import SideBarBox from '../home/FirstBlock/sidebar/SideBarBox';
 export class Recipes extends Component {
   render() {
     return (
-      <section class="all-recipes-page-wrap padding-top-80 padding-bottom-22">
-        <div class="container">
-          <div class="row gutters-60">
+      <section className="all-recipes-page-wrap padding-top-80 padding-bottom-22">
+        <div className="container">
+          <div className="row gutters-60">
             <RecipesBox/>
             <SideBarBox/>
           </div>

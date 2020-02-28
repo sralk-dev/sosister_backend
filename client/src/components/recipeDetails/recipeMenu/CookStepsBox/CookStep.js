@@ -6,12 +6,12 @@ export class CookStep extends Component {
     const {number, mins, description} = this.props.info;
 
     return (
-      <div class="direction-box-layout2">
-        <div class="serial-number">
-          <h4 class="number-title">{number}</h4><span>Step</span>
+      <div className="direction-box-layout2">
+        <div className="serial-number">
+          <h4 className="number-title">{number}</h4><span>Step</span>
         </div>
-        <div class="item-content">
-          <span class="item-time"><i class="far fa-clock"></i>{mins} Mins</span>
+        <div className="item-content">
+          <span className="item-time"><i className="far fa-clock"></i>{mins} Mins</span>
           <p>{description}</p>
         </div>
       </div>

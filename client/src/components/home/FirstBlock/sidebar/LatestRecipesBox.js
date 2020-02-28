@@ -37,15 +37,15 @@ let dummyData = [
 export class LatestRecipesBox extends Component {
   render() {
 
-    const recipes = dummyData.map((recipe, i) => <SideBarRecipe info={{...recipe, number: i+1}}/>)
+    const recipes = dummyData.map((recipe, i) => <SideBarRecipe key={i} info={{...recipe, number: i+1}}/>)
 
     return (
-      <div class="widget">
-        <div class="section-heading heading-dark">
-          <h3 class="item-heading">LATEST RECIPES</h3>
+      <div className="widget">
+        <div className="section-heading heading-dark">
+          <h3 className="item-heading">LATEST RECIPES</h3>
         </div>
-        <div class="widget-latest">
-          <ul class="block-list">
+        <div className="widget-latest">
+          <ul className="block-list">
             {recipes}
           </ul>
         </div>

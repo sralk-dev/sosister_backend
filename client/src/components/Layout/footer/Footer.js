@@ -6,11 +6,11 @@ export class Footer extends Component {
   render() {
     return (
       <div>
-        <footer class="ranna-bg-dark">
-          <div class="container">
+        <footer className="ranna-bg-dark">
+          <div className="container">
             <Logo/>
             <Menu/>
-            <div class="copyright">© All Right Reserved 2019</div>
+            <div className="copyright">© All Right Reserved 2019</div>
           </div>
         </footer>
       </div>

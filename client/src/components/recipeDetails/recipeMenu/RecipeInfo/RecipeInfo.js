@@ -9,11 +9,11 @@ export class RecipeInfo extends Component {
     
     return (
       <div>
-        <div class="ctg-name">{category}</div>
-        <h2 class="item-title">{title}</h2>
+        <div className="ctg-name">{category}</div>
+        <h2 className="item-title">{title}</h2>
         <RecipeWidgets info={{owner, date, qtyLikes, score}}/>
         <Features info={{prepTime, cookTime, serving, views}}/>
-        <p class="item-description">
+        <p className="item-description">
           More off this less hello salamander lied porpoise much over tightly
           circa horse taped so innocuously side crudey mightily rigorous plot life. New homes in
           particular are subject.All recipes created with FoodiePress have suport for Micoformats and

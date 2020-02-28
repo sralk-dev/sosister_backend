@@ -7,9 +7,9 @@ import Author from './Author/Author'
 export class RecipeMenu extends Component {
   render() {
     return (
-      <section class="single-recipe-wrap-layout2 padding-bottom-80">
-        <div class="container">
-          <div class="single-recipe-layout2">
+      <section className="single-recipe-wrap-layout2 padding-bottom-80">
+        <div className="container">
+          <div className="single-recipe-layout2">
             <RecipeInfo info={this.props.info}/>
             <StructureBox info={this.props.info}/>
             <CookStepsBox cookSteps={this.props.info.cookSteps}/>

@@ -4,13 +4,13 @@ import NutritionItem from './NutritionItem'
 export class Nutritions extends Component {
   render() {
 
-    const nutritions = this.props.nutritions.map( item => <NutritionItem info={item}/> )
+    const nutritions = this.props.nutritions.map( (item, i) => <NutritionItem key={i} info={item}/> )
 
     return (
-      <div class="col-xl-6 col-12">
-        <div class="nutrition-wrap">
-          <h3 class="item-title"><i class="fas fa-info"></i>Nutrition</h3>
-          <ul class="nutrition-list">
+      <div className="col-xl-6 col-12">
+        <div className="nutrition-wrap">
+          <h3 className="item-title"><i className="fas fa-info"></i>Nutrition</h3>
+          <ul className="nutrition-list">
             {nutritions}
           </ul>
         </div>
