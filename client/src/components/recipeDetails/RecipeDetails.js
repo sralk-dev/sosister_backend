@@ -26,6 +26,28 @@ let dummyData = {
     "vse",
     "bolshe",
     "nichego"
+  ],
+  "cookSteps": [
+    {
+      'number': 1,
+      'mins': 10,
+      'description': 'More off this less hello salamander lied porpoise much over tightly circa horse taped so ously side crudey mightily rigorous plot lifew homes in particular are subject.'
+    },
+    {
+      'number': 2,
+      'mins': 110,
+      'description': 'I love cooking and blogging. Using a fork, break salmon. Halve reserved potatoes and eggs crosswise. The of something of did require met of help have someone.'
+    },
+    {
+      'number': 3,
+      'mins': 12,
+      'description': 'More off this less hello salamander lied porpoise much over tightly circa horse taped so ously side crudey mightily rigorous plot lifew homes in particular are subject.'
+    },
+    {
+      'number': 4,
+      'mins': 34,
+      'description': 'I love cooking and blogging. Using a fork, break salmon. Halve reserved potatoes and eggs crosswise. The of something of did require met of help have someone.'
+    }
   ]
 }
 
