@@ -1,4 +1,9 @@
 const initialState = {
+  slider: {
+    data: [],
+    isLoading: false,
+    error: null
+  },
   trendingRecipes: {
     data: [],
     isLoading: false,
@@ -30,6 +35,33 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         trendingRecipes: {
+          data: [],
+          isLoading: false,
+          error: action.payload
+        }
+      };
+    case 'FETCH_SLIDER_ITEMS_REQUEST':
+      return {
+        ...state,
+        slider: {
+          data: [],
+          isLoading: true,
+          error: null
+        }
+      };
+    case 'FETCH_SLIDER_ITEMS_SUCCESS':
+      return {
+        ...state,
+        slider: {
+          data: action.payload,
+          isLoading: false,
+          error: null
+        }
+      };
+    case 'FETCH_SLIDER_ITEMS_FAILURE':
+      return {
+        ...state,
+        slider: {
           data: [],
           isLoading: false,
           error: action.payload

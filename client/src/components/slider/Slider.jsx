@@ -5,7 +5,7 @@ import './Slider.css';
 
 const SliderArrow = ({className, onClick, type}) => {
   
-  const label = type === "prev" ? <i class="fas fa-chevron-left"></i> : <i class="fas fa-chevron-right"></i>;
+  const label = type === "prev" ? <i className="fas fa-chevron-left"></i> : <i className="fas fa-chevron-right"></i>;
 
   return <button 
             type="button" 
