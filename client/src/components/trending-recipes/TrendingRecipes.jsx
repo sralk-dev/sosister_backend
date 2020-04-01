@@ -9,6 +9,8 @@ import ErrorIndicator from '../error-indicator';
 
 import {fetchTrendingRecipes} from '../../actions'
 
+import './TrendingRecipes.css';
+
 const TrendingRecipes = ({data}) => {
 
   const recipesRender = data.map( (item) => <RecipeItem key={item.id} recipe={item}/>)
@@ -37,7 +39,7 @@ const TrendingRecipesContainer = ({trendingRecipes: {data, isLoading, error}, fe
   }
 
   return (
-    <div className="col-lg-8">
+    <div className="trending-recipes col-lg-8">
       <div className="section-heading heading-dark">
           <h2 className="item-heading">TRENDING RECIPES</h2>
       </div>
