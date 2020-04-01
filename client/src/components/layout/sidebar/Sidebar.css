@@ -1,0 +1,40 @@
+@media only screen and (max-width: 991px) {
+	.sidebar-break-md {
+		margin-top: 5rem;
+	}
+}
+
+.sidebar-widget-area {
+  margin: 20px 0 3rem 0;
+	transition: all 0.5s ease-in;
+}
+
+.sidebar-widget-area .widget {
+	margin-bottom: 4rem;
+	background-color: #ffffff;
+}
+
+.sidebar-widget-area .widget:last-child {
+	margin-bottom: 0 !important;
+}
+
+.sidebar-widget-area .widget .widget-title {
+	position: relative;
+	padding-bottom: 15px;
+	margin-bottom: 25px;
+	font-weight: 500;
+}
+
+.sidebar-widget-area .widget .widget-title:after {
+	position: absolute;
+	content: "";
+	bottom: 0;
+	left: 0;
+	background-color: #ff4a52;
+	height: 4px;
+	width: 45px;
+}
+
+.sidebar-widget-area .widget-box-padding {
+	padding: 30px;
+}
