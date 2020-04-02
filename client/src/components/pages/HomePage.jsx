@@ -5,6 +5,7 @@ import SliderHomePage from '../slider-home-page';
 import Sidebar from '../layout/sidebar';
 import FollowUs from '../widgets/follow-us';
 import TopCategories from '../widgets/top-categories';
+import LatestRecipes from '../widgets/latest-recipes';
 
 const HomePageContainer = () => {
   
@@ -16,6 +17,7 @@ const HomePageContainer = () => {
         <Sidebar>
           <FollowUs/>
           <TopCategories/>
+          <LatestRecipes/>
         </Sidebar>
       </div>
     </div>

@@ -44,11 +44,11 @@ const TopCategoriesContainer = ({categories: {data, isLoading, error}, fetchTopC
   }
 
   return (
-    <div class="widget">
-      <div class="section-heading heading-dark">
-        <h3 class="item-heading">CATEGORIES</h3>
+    <div className="widget">
+      <div className="section-heading heading-dark">
+        <h3 className="item-heading">CATEGORIES</h3>
       </div>
-      <div class="widget-categories">
+      <div className="widget-categories">
         {renderData}
       </div>
     </div>

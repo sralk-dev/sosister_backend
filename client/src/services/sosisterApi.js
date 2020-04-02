@@ -40,6 +40,44 @@ class SosisterApi {
     {id: 2, title: 'Рыбка', count: 34},
     {id: 3, title: 'И', count: 56},
     {id: 4, title: 'Селедка', count: 4}
+  ];
+
+  latestRecipes = [
+    {
+      id: 1,
+      title: 'Рыба с руками',
+      image: 'https://static.1000.menu/img/content/17649/krasnaya-ryba-v-folge-v-duxovke_1479186670_0_max.jpg', 
+      category: 'Рыба', 
+      owner: 'John Petrov', 
+     },
+     {
+      id: 2,
+      title: 'Мороженое',
+      image: 'https://cdn.lifehacker.ru/wp-content/uploads/2019/05/Depositphotos_68972477_xl-2015_1559126153-e1559129205144-630x315.jpg', 
+      category: 'Десерты', 
+      owner: 'John Petrov', 
+     },
+     {
+      id: 3,
+      title: 'Рыwfqwqfми',
+      image: 'https://static.1000.menu/img/content/17649/krasnaya-ryba-v-folge-v-duxovke_1479186670_0_max.jpg', 
+      category: 'Рыба', 
+      owner: 'John Petrov', 
+     },
+     {
+      id: 4,
+      title: 'Жирная шняга',
+      image: 'https://www.gastronom.ru/binfiles/images/20180629/bec2ae2d.jpg', 
+      category: 'Рыба', 
+      owner: 'John Petrov', 
+     },
+     {
+      id: 5,
+      title: 'Полезная шняга',
+      image: 'https://ichef.bbci.co.uk/news/410/cpsprodpb/41F7/production/_105278861_gettyimages-855098134.jpg', 
+      category: 'Десерты', 
+      owner: 'John Petrov', 
+     },
   ]
 
   getTrendingRecipes = ()=> {
@@ -52,6 +90,12 @@ class SosisterApi {
     return new Promise( (resolve) => {
       setTimeout( () => resolve(this.topCategoriesData), 1258)
     } );
+  }
+
+  getLatestRecipes = () => {
+    return new Promise( (resolve) => {
+      setTimeout( () => resolve(this.latestRecipes), 2201)
+    });
   }
 }
 
