@@ -8,6 +8,13 @@ const initialState = {
     data: [],
     isLoading: false,
     error: null
+  },
+  sidebar: {
+    topCategories: {
+      data: [],
+      isLoading: false,
+      error: null
+    }
   }
 };
 
@@ -61,12 +68,51 @@ const reducer = (state = initialState, action) => {
     case 'FETCH_SLIDER_ITEMS_FAILURE':
       return {
         ...state,
-        slider: {
-          data: [],
-          isLoading: false,
-          error: action.payload
+        sidebar: {
+          ... state.sidebar,
+          topCategories:{
+            data: [],
+            isLoading: false,
+            error: action.payload
+          }
         }
       };
+      case 'FETCH_TOP_CATEGORIES_REQUEST':
+        return {
+          ...state,
+          sidebar: {
+            ... state.sidebar,
+            topCategories:{
+              data: [],
+              isLoading: true,
+              error: null
+            }
+          }
+        };
+      case 'FETCH_TOP_CATEGORIES_SUCCESS':
+        return {
+          ...state,
+          sidebar: {
+            ... state.sidebar,
+            topCategories: {
+              data: action.payload,
+              isLoading: false,
+              error: null
+            }
+          }
+        };
+      case 'FETCH_TOP_CATEGORIES_FAILURE':
+        return {
+          ...state,
+          sidebar: {
+            ... state.sidebar,
+            topCategories: {
+              data: [],
+              isLoading: false,
+              error: action.payload
+            }
+          }
+        };
     default:
       return state
   }

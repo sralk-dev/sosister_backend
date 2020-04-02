@@ -33,12 +33,25 @@ class SosisterApi {
       likes: '123', 
       cooktime: '15'
      },
+  ];
+
+  topCategoriesData = [
+    {id: 1, title: 'Пиво', count: 214},
+    {id: 2, title: 'Рыбка', count: 34},
+    {id: 3, title: 'И', count: 56},
+    {id: 4, title: 'Селедка', count: 4}
   ]
 
   getTrendingRecipes = ()=> {
     return new Promise( (resolve) => {
       setTimeout( () => resolve(this.trendingRecipesData), 200)
     })
+  }
+
+  getTopCategories = () => {
+    return new Promise( (resolve) => {
+      setTimeout( () => resolve(this.topCategoriesData), 1258)
+    } );
   }
 }
 

@@ -1,0 +1,39 @@
+.widget-categories ul li {
+	margin-bottom: 15px;
+}
+
+.widget-categories ul li a {
+	position: relative;
+	display: block;
+	color: #111111;
+	-webkit-transition: all 0.5s ease-out;
+	-moz-transition: all 0.5s ease-out;
+	-ms-transition: all 0.5s ease-out;
+	-o-transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
+}
+
+.widget-categories ul li a span {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+	right: 0;
+	z-index: 2;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.widget-categories ul li:hover a {
+	color: #ff4a52;
+}
+
+.widget-categories ul li:last-child {
+	margin-bottom: 0;
+}
