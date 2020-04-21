@@ -25,6 +25,11 @@ const initialState = {
     data: [],
     isLoading: false,
     error: null
+  },
+  categories: {
+    data: [],
+    isLoading: false,
+    error: null
   }
 };
 
@@ -159,28 +164,55 @@ const reducer = (state = initialState, action) => {
               }
             }
           };
-          case 'FETCH_DETAIL_RECIPE_REQUEST':
+        case 'FETCH_DETAIL_RECIPE_REQUEST':
+          return {
+            ...state,
+            detail: {
+              data: [],
+              isLoading: true,
+              error: null
+            }
+          };
+        case 'FETCH_DETAIL_RECIPE_SUCCESS':
+          return {
+            ...state,
+            detail: {
+              data: action.payload,
+              isLoading: false,
+              error: null
+            }
+          };
+        case 'FETCH_DETAIL_RECIPE_FAILURE':
+          return {
+            ...state,
+            detail: {
+              data: [],
+              isLoading: false,
+              error: action.payload
+            }
+          };
+          case 'FETCH_CATEGORIES_REQUEST':
             return {
               ...state,
-              detail: {
+              categories: {
                 data: [],
                 isLoading: true,
                 error: null
               }
             };
-          case 'FETCH_DETAIL_RECIPE_SUCCESS':
+          case 'FETCH_CATEGORIES_SUCCESS':
             return {
               ...state,
-              detail: {
+              categories: {
                 data: action.payload,
                 isLoading: false,
                 error: null
               }
             };
-          case 'FETCH_DETAIL_RECIPE_FAILURE':
+          case 'FETCH_CATEGORIES_FAILURE':
             return {
               ...state,
-              detail: {
+              categories: {
                 data: [],
                 isLoading: false,
                 error: action.payload
