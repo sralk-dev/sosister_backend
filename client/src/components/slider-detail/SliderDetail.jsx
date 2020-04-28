@@ -16,7 +16,7 @@ const SliderItem = ({url}) => {
 
 const SliderDetail = ({images = []}) => {
 
-  const renderData = images.map( (item) => <SliderItem url={item}/>);
+  const renderData = images.map( (item) => <SliderItem key={item} url={item}/>);
 
   return (
     <Slider>

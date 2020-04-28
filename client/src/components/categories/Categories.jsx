@@ -13,9 +13,9 @@ const Categories = ({data}) => {
   const renderData = data.map( (item) => <CategoryItem key={item.id} category={item}/>);
 
   return (
-    <section class="category-page-wrap padding-top-80 padding-bottom-50">
-      <div class="container">
-        <div class="row">
+    <section className="category-page-wrap padding-top-80 padding-bottom-50">
+      <div className="container">
+        <div className="row">
           {renderData}
         </div>
       </div>
