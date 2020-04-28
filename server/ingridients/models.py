@@ -1,11 +1,10 @@
 from django.db import models
 from pytils.translit import slugify
 
-
 class Ingridient(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    poster = models.ImageField(upload_to='ingridients/static/img/posters', blank=True)
+    poster = models.ImageField(upload_to='ingridients/static/img/posters', blank=True, null=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
     prots = models.PositiveSmallIntegerField()
     fats = models.PositiveSmallIntegerField()

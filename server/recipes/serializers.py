@@ -56,6 +56,12 @@ class StepSerializer(DynamicFieldsModelSerializer):
         fields = '__all__'
 
 
+class CreateRecipeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Recipe
+        exclude = ('id', 'slug', 'dtcreate', 'dtupdate', 'views')
+
+
 class ListRecipeSerializer(serializers.ModelSerializer):
     owner = UserSerializer(read_only=True, fields=('id', 'username'))
     grades = GradeSerializer(read_only=True, many=True, fields=('id', 'value'))
@@ -64,7 +70,7 @@ class ListRecipeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Recipe
-        fields = ('id', 'owner', 'slug', 'description', 'cook_time',
+        fields = ('id', 'title', 'owner', 'slug', 'description', 'cook_time',
                   'prep_time', 'grades', 'categories', 'dtcreate', 'views')
 
 
@@ -74,8 +80,9 @@ class SingleRecipeSerializer(serializers.ModelSerializer):
     categories = CategorySerializer(read_only=True, many=True)
     ingridients = IngridientSerializer(read_only=True, many=True)
     steps = StepSerializer(read_only=True, many=True, exclude=('recipe', ))
+    title = serializers.CharField(max_length=200, required=False)
 
     class Meta:
         model = Recipe
-        fields = ('id', 'owner', 'slug', 'description', 'ingridients', 'cook_time',
-                  'steps', 'prep_time', 'grades', 'categories', 'views', 'dtcreate', 'dtupdate')
+        fields = ('id', 'title', 'owner', 'slug', 'description', 'ingridients', 'cook_time',
+                  'poster', 'steps', 'prep_time', 'grades', 'categories', 'views', 'dtcreate', 'dtupdate')
