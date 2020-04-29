@@ -1,8 +1,10 @@
 from django.test import TestCase, Client
 from django.urls import reverse
-from ..models import Recipe, Category, Ingridient, Step
+from recipes.models import Recipe, Grade, Step
+from categories.models import Category
+from ingridients.models import Ingridient
 from django.contrib.auth.models import User
-from ..serializers import ListRecipeSerializer, SingleRecipeSerializer, CreateRecipeSerializer
+from all_serializers import ListRecipeSerializer, SingleRecipeSerializer, CreateRecipeSerializer
 from rest_framework import status
 from model_bakery import baker
 import random

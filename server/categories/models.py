@@ -4,9 +4,10 @@ from pytils.translit import slugify
 
 class Category(models.Model):
     title = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100, unique=True, blank=True)
-    poster = models.ImageField(upload_to='categories/static/img/posters')
-    description = models.TextField(blank=True)
+    slug = models.SlugField(unique=True, blank=True, editable=False)
+    poster = models.ImageField(
+        upload_to='categories/static/img/posters', blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:

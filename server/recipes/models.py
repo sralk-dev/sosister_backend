@@ -9,8 +9,7 @@ from utils import get_unique_slug
 class Recipe(models.Model):
     owner = models.ForeignKey(User, on_delete=models.PROTECT)
     title = models.CharField(max_length=200)
-    slug = models.SlugField(max_length=200, unique=True,
-                            blank=True, editable=False)
+    slug = models.SlugField(unique=True, blank=True, editable=False)
     categories = models.ManyToManyField(Category)
     description = models.TextField()
     ingridients = models.ManyToManyField(Ingridient)

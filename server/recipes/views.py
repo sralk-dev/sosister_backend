@@ -1,13 +1,7 @@
 from rest_framework import generics
-from rest_framework.pagination import PageNumberPagination
 from .models import Recipe
-from .serializers import ListRecipeSerializer, SingleRecipeSerializer, CreateRecipeSerializer
-
-
-class ResultsSetPagination(PageNumberPagination):
-    page_size = 40
-    page_size_query_param = 'page_size'
-    max_page_size = 1000
+from all_serializers import ListRecipeSerializer, SingleRecipeSerializer, CreateRecipeSerializer
+from utils import ResultsSetPagination
 
 
 class ListRecipesView(generics.ListCreateAPIView):

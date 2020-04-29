@@ -1,27 +1,9 @@
+from recipes.models import Recipe, Grade, Step
+from categories.models import Category
+from ingridients.models import Ingridient
 from rest_framework import serializers
-from .models import Recipe, Grade, Category, Ingridient, Step
 from django.contrib.auth.models import User
-
-
-class DynamicFieldsModelSerializer(serializers.ModelSerializer):
-    def __init__(self, *args, **kwargs):
-        fields = kwargs.pop('fields', None)
-        exclude = kwargs.pop('exclude', None)
-
-        super(DynamicFieldsModelSerializer, self).__init__(*args, **kwargs)
-
-        if fields:
-            allowed = set(fields)
-            existing = set(self.fields)
-            for field_name in existing - allowed:
-                self.fields.pop(field_name)
-
-        if exclude:
-            disallowed = set(exclude)
-            existing = set(self.fields)
-            for field_name in disallowed:
-                if field_name in existing:
-                    self.fields.pop(field_name)
+from utils import DynamicFieldsModelSerializer
 
 
 class UserSerializer(DynamicFieldsModelSerializer):
