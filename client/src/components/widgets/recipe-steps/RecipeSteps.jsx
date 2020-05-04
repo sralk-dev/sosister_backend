@@ -5,12 +5,12 @@ import './RecipeSteps.css';
 const RecipeSteps = ({steps = []}) => {
 
 	const renderData = steps.map( (item) => {
-		return <div class="direction-box-layout2">
-							<div class="serial-number">
-								<h4 class="number-title">{item.order}</h4><span>Step</span>
+		return <div key={item.id} className="direction-box-layout2">
+							<div className="serial-number">
+								<h4 className="number-title">{item.order}</h4><span>Step</span>
 							</div>
-							<div class="item-content">
-								<span class="item-time"><i class="far fa-clock"></i>{item.time} Mins</span>
+							<div className="item-content">
+								<span className="item-time"><i className="far fa-clock"></i>{item.time} Mins</span>
 								<p>{item.description}</p>
 							</div>
 						</div>
@@ -18,9 +18,9 @@ const RecipeSteps = ({steps = []}) => {
 	})
 
   return (
-    <div class="direction-wrap-layout2">
-      <div class="section-heading2 heading-dark">
-        <h2 class="item-heading">Follow The Directions</h2>
+    <div className="direction-wrap-layout2">
+      <div className="section-heading2 heading-dark">
+        <h2 className="item-heading">Follow The Directions</h2>
       </div>
       {renderData}
     </div>

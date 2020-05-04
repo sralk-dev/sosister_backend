@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import Slider from '../slider';
 import WithSosisterApi from '../hoc/WithSosisterApi';
 import SliderItem from '../slider-item';
-import {fetchSliderItems} from '../../actions';
+import fetchSliderItems from '../../actions/sliderItems';
 import Spinner from '../spinner';
 import ErrorIndicator from '../error-indicator';
 
@@ -40,7 +40,7 @@ const SliderHomePageContainer = ({slider:{data, isLoading, error}, fetchSliderIt
 
 const mapStateToProps = (state) => {
   return {
-    slider: state.slider
+    slider: state.homePage.slider
   }
 }
 

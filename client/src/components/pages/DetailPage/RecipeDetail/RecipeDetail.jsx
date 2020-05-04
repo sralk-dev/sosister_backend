@@ -14,7 +14,7 @@ import WithSosisterApi from '../../../hoc/WithSosisterApi';
 import Spinner from '../../../spinner';
 import ErrorIndicator from '../../../error-indicator';
 
-import {fetchDetailRecipe} from '../../../../actions'
+import fetchDetailRecipe from '../../../../actions/detailRecipe'
 
 import './RecipeDetail.css';
 
@@ -25,18 +25,18 @@ const RecipeDetail = ({data}) => {
   return (
     <React.Fragment>
       <SliderDetail images={images}/>
-      <section class="single-recipe-wrap-layout2 padding-bottom-80">
-        <div class="container">
-          <div class="single-recipe-layout2">
-            <div class="ctg-name">{category}</div>
-            <h2 class="item-title">{title}</h2>
-            <div class="d-flex align-items-center justify-content-between flex-wrap mb-5">
+      <section className="single-recipe-wrap-layout2 padding-bottom-80">
+        <div className="container">
+          <div className="single-recipe-layout2">
+            <div className="ctg-name">{category}</div>
+            <h2 className="item-title">{title}</h2>
+            <div className="d-flex align-items-center justify-content-between flex-wrap mb-5">
               <StarScore score={score}/>
               <RecipeMeta owner={owner} likes={likes} cooktime={cooktime}/>
               <RecipeAction/>
             </div>
             <RecipeFeature preptime={preptime} cooktime={cooktime} serving={serving} views={views}/>
-            <p class="item-description">{description}</p>
+            <p className="item-description">{description}</p>
             <RecipeIngredients ingredients={ingredients}/>
             <RecipeSteps steps={steps}/>
           </div>
@@ -65,7 +65,7 @@ const RecipeDetailContainer = ({recipeDetail: {data, isLoading, error}, fetchDet
 
 const mapStateToProps = (state) => {
   return {
-    recipeDetail: state.detail
+    recipeDetail: state.detailPage.detail
   }
 }
 

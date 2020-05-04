@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import WithSosisterApi from '../../hoc/WithSosisterApi';
 import Spinner from '../../spinner';
 import ErrorIndicator from '../../error-indicator';
-import {fetchTopCategories} from '../../../actions'
+import fetchTopCategories from '../../../actions/topCategories';
 
 import './TopCategories.css';
 

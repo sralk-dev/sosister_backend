@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 
 import CategoryItem from '../category-item';
 import WithSosisterApi from '../hoc/WithSosisterApi';
-import {fetchCategories} from '../../actions';
+import fetchCategories from '../../actions/categories';
 import Spinner from '../spinner';
 import ErrorIndicator from '../error-indicator';
 
@@ -13,9 +13,9 @@ const Categories = ({data}) => {
   const renderData = data.map( (item) => <CategoryItem key={item.id} category={item}/>);
 
   return (
-    <section class="category-page-wrap padding-top-80 padding-bottom-50">
-      <div class="container">
-        <div class="row">
+    <section className="category-page-wrap padding-top-80 padding-bottom-50">
+      <div className="container">
+        <div className="row">
           {renderData}
         </div>
       </div>
@@ -44,7 +44,7 @@ const CategoriesContainer = ({categories: {data, isLoading, error}, fetchCategor
 
 const mapStateToProps = (state) => {
   return {
-    categories: state.categories
+    categories: state.categoryPage.categories
   }
 }
 

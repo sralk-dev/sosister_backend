@@ -7,7 +7,7 @@ import WithSositerApi from './../hoc/WithSosisterApi';
 import Spinner from '../spinner';
 import ErrorIndicator from '../error-indicator';
 
-import {fetchTrendingRecipes} from '../../actions'
+import fetchTrendingRecipes from '../../actions/trendingRecipes'
 
 import './TrendingRecipes.css';
 
@@ -50,7 +50,7 @@ const TrendingRecipesContainer = ({trendingRecipes: {data, isLoading, error}, fe
 
 const mapStateToProps = (state) => {
   return {
-    trendingRecipes: state.trendingRecipes
+    trendingRecipes: state.homePage.trendingRecipes
   }
 }
 

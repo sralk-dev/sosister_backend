@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 import WithSosisterApi from '../../hoc/WithSosisterApi';
 import Spinner from '../../spinner';
 import ErrorIndicator from '../../error-indicator';
-import {fetchLatestRecipes} from '../../../actions';
+import fetchLatestRecipes from '../../../actions/topLatestRecipes';
 
 import './LatestRecipes.css';
 
