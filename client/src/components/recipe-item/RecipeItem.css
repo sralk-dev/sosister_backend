@@ -40,6 +40,11 @@
 	}
 }
 
+.product-box-layout1 .item-content {
+	display: flex;
+	flex-direction: column;
+}
+
 .product-box-layout1 .item-content .sub-title {
 	color: #ff4a52;
 	font-size: 14px;
@@ -49,6 +54,7 @@
 }
 
 .product-box-layout1 .item-content .item-title {
+	flex: 0 0 50px;
 	font-weight: 700;
 	overflow: hidden;
 	-o-text-overflow: ellipsis;
@@ -166,6 +172,8 @@
 
 .recipe-item .item-figure {
 	flex: 0 0 200px;
+	display: flex;
+	flex-direction: column;
 }
 
 .recipe-item .item-figure img {
