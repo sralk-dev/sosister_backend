@@ -33,6 +33,17 @@ class SosisterApi {
       likes: '123', 
       cooktime: '15'
      },
+     {
+      id: 5,
+      title: 'Мороженое Мороженое Мороженое Мороженое Мороженое',
+      image: 'https://kidpassage.com/images/publications/eda-sankt-peterburge-chto-poprobovat-skolko-stoit/cover_original.jpg', 
+      category: 'Десерты', 
+      score: 5, 
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magni qui cum? Veritatis consequuntur optio ea inventore aperiam velit maxime eveniet nobis magni non libero veniam dolorem sed nemo, illum enim unde amet exercitationem dicta. Ut hic obcaecati molestias, nostrum assumenda dignissimos facilis deleniti quis nulla, ratione cum labore vitae!', 
+      owner: 'John Petrov', 
+      likes: '123', 
+      cooktime: '15'
+     }
   ];
 
   topCategoriesData = [
@@ -153,6 +164,39 @@ class SosisterApi {
       likes: '123', 
       cooktime: '15'
      },
+     {
+      id: 4,
+      title: 'Мороженое',
+      image: 'https://images.aif.ru/017/670/9a6e8711e058b9c97bcbe0ef1061c82c.jpg', 
+      category: 'Десерты', 
+      score: 5, 
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magni qui cum? Veritatis consequuntur optio ea inventore aperiam velit maxime eveniet nobis magni non libero veniam dolorem sed nemo, illum enim unde amet exercitationem dicta. Ut hic obcaecati molestias, nostrum assumenda dignissimos facilis deleniti quis nulla, ratione cum labore vitae!', 
+      owner: 'John Petrov', 
+      likes: '123', 
+      cooktime: '15'
+     },
+     {
+      id: 5,
+      title: 'Мороженое Мороженое Мороженое Мороженое Мороженое',
+      image: 'https://kidpassage.com/images/publications/eda-sankt-peterburge-chto-poprobovat-skolko-stoit/cover_original.jpg', 
+      category: 'Десерты', 
+      score: 5, 
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magni qui cum? Veritatis consequuntur optio ea inventore aperiam velit maxime eveniet nobis magni non libero veniam dolorem sed nemo, illum enim unde amet exercitationem dicta. Ut hic obcaecati molestias, nostrum assumenda dignissimos facilis deleniti quis nulla, ratione cum labore vitae!', 
+      owner: 'John Petrov', 
+      likes: '123', 
+      cooktime: '15'
+     },
+     {
+      id: 6,
+      title: 'Рыба с руками',
+      image: 'https://www.2m5.ru/images/2019/08/11/wfPI.jpg', 
+      category: 'Рыба', 
+      score: 3, 
+      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt magni qui cum? Veritatis consequuntur optio ea inventore aperiam velit maxime eveniet nobis magni non libero veniam dolorem sed nemo, illum enim unde amet exercitationem dicta. Ut hic obcaecati molestias, nostrum assumenda dignissimos facilis deleniti quis nulla, ratione cum labore vitae!', 
+      owner: 'John Petrov', 
+      likes: '23', 
+      cooktime: '21'
+     }
   ];
 
   getTrendingRecipes = ()=> {

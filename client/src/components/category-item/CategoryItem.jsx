@@ -7,7 +7,7 @@ const CategoryItem = ({category}) => {
   const {title, recipeNums, image} = category;
 
   return (
-    <div className="col-lg-4 col-md-6 col-sm-6 col-12">
+    <div className="col-lg-4 col-md-6 col-sm-6 col-12 category-item">
       <div className="category-box-layout1">
         <figure className="item-figure">
           <a href="single-recipe1.html">

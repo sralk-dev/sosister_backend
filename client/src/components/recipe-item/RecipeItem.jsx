@@ -16,7 +16,7 @@ const RecipeItem = ({recipe}) => {
   const truncDescription = truncate(description, 20);
   return (
     <div className="col-md-6 col-sm-6 col-12">
-      <div className="product-box-layout1">
+      <div className="product-box-layout1 recipe-item">
         <figure className="item-figure">
           <a href="single-recipe1.html">
             <img src={image} alt="Product"/>
