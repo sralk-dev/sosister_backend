@@ -4,3 +4,5 @@ pytils
 pillow
 drf-yasg
 model_bakery
+django_filters
+django-cors-headers
