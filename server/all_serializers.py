@@ -21,9 +21,15 @@ class GradeSerializer(DynamicFieldsModelSerializer):
 
 
 class CategorySerializer(DynamicFieldsModelSerializer):
+    recipes_count = serializers.SerializerMethodField()
+
     class Meta:
         model = Category
-        fields = '__all__'
+        fields = ('id', 'title', 'slug', 'poster',
+                  'description', 'recipes_count')
+
+    def get_recipes_count(self, obj):
+        return obj.recipe_set.count()
 
 
 class IngridientSerializer(DynamicFieldsModelSerializer):
