@@ -15,5 +15,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('recipes/', include('recipes.urls')),
     path('categories/', include('categories.urls')),
+    path('ingridients/', include('ingridients.urls')),
     path('', schema_view.with_ui('swagger', cache_timeout=0), name='swagger'),
 ]
