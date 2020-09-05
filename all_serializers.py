@@ -45,6 +45,8 @@ class StepSerializer(DynamicFieldsModelSerializer):
 
 
 class CreateRecipeSerializer(serializers.ModelSerializer):
+    steps = StepSerializer(read_only=True, many=True, exclude=('recipe', 'id'))
+
     class Meta:
         model = Recipe
         exclude = ('id', 'slug', 'dtcreate', 'dtupdate', 'views')
@@ -62,13 +64,17 @@ class ListRecipeSerializer(serializers.ModelSerializer):
                   'prep_time', 'spent_time', 'grades', 'categories', 'dtcreate', 'views')
 
 
-class SingleRecipeSerializer(serializers.ModelSerializer):
+class SingleRecipeSerializer(serializers.HyperlinkedModelSerializer):
     owner = UserSerializer(read_only=True, fields=('id', 'username'))
     grades = GradeSerializer(read_only=True, many=True, exclude=('recipe', ))
     categories = CategorySerializer(read_only=True, many=True)
     ingridients = IngridientSerializer(read_only=True, many=True)
     steps = StepSerializer(read_only=True, many=True, exclude=('recipe', ))
     title = serializers.CharField(max_length=200, required=False)
+    lookup_field = 'slug'
+    extra_kwargs = {
+        'url': {'lookup_field': 'slug'}
+    }
 
     class Meta:
         model = Recipe

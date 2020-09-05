@@ -20,3 +20,4 @@ class ListRecipesView(generics.ListCreateAPIView):
 class SingleRecipeView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Recipe.objects.all()
     serializer_class = SingleRecipeSerializer
+    lookup_field = 'slug'

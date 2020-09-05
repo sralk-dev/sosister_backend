@@ -12,6 +12,7 @@ class RecipeFilter(django_filters.FilterSet):
     dtcreate = django_filters.IsoDateTimeFilter()
     spent_time = django_filters.NumberFilter(
         field_name='spent_time', lookup_expr='lte')
+    category = django_filters.CharFilter(field_name='categories__slug', lookup_expr='iexact')
 
     ordering = OrderingFilter(fields=('dtcreate', 'views', 'title'))
 
@@ -19,4 +20,4 @@ class RecipeFilter(django_filters.FilterSet):
 class Meta:
     model = Recipe
     fields = ['dtcreate', 'owner__id', 'owner__username',
-              'title', 'categories__id', 'categories__title', 'spent_time']
+              'title', 'categories__id', 'categories__slug', 'spent_time']
