@@ -45,11 +45,22 @@ class StepSerializer(DynamicFieldsModelSerializer):
 
 
 class CreateRecipeSerializer(serializers.ModelSerializer):
-    steps = StepSerializer(read_only=True, many=True, exclude=('recipe', 'id'))
+    steps = StepSerializer(many=True, exclude=('recipe', 'id'))
 
     class Meta:
         model = Recipe
         exclude = ('id', 'slug', 'dtcreate', 'dtupdate', 'views')
+
+    def create(self, validated_data):
+        steps_data = validated_data.pop('steps')
+        categories = validated_data.pop('categories')
+        ingridients = validated_data.pop('ingridients')
+        recipe = Recipe.objects.create(**validated_data)
+        recipe.categories.add(*categories)
+        recipe.ingridients.add(*ingridients)
+        for step_data in steps_data:
+            Step.objects.create(recipe=recipe, **step_data)
+        return recipe
 
 
 class ListRecipeSerializer(serializers.ModelSerializer):
