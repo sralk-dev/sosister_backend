@@ -157,3 +157,4 @@ dmypy.json
 
 **/migrations/*
 **/static/*
+**/local.py
