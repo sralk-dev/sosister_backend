@@ -7,7 +7,7 @@ class Ingridient(models.Model):
     description = models.TextField(blank=True, null=True)
     poster = models.ImageField(
         upload_to='ingridients/static/img/posters', blank=True, null=True)
-    slug = models.SlugField(unique=True, blank=True)
+    slug = models.SlugField(unique=True, blank=True, max_length=255)
     prots = models.PositiveSmallIntegerField(blank=True, null=True)
     fats = models.PositiveSmallIntegerField(blank=True, null=True)
     carbs = models.PositiveSmallIntegerField(blank=True, null=True)
